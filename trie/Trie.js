@@ -14,7 +14,7 @@ class Trie {
         let newNode = new Map();
         node.set(letter, newNode);
       }
-        node = node.get(letter);
+        node = node.get(letter); 
       
     }
     node.set("*", null);

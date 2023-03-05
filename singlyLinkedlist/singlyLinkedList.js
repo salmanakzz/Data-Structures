@@ -35,7 +35,7 @@ function deleteNode(data) {
     let temp = head , prev = null;
     if (temp != null && temp.data == data) {
         head = temp.next;
-        return;
+        return; 
     }
 
      while(temp != null && temp.data != data){

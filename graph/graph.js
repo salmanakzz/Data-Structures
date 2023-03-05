@@ -25,6 +25,42 @@ class Graph {
 
     console.log(map);
   }
+
+  bfs(start){
+    let queue = [start]
+    let visited = new Set()
+    visited.add(visited)
+
+    while (queue.length >0) {
+      let vertex = queue.shift()
+      console.log(vertex);
+      for (const val of this.map.get(vertex)) {
+        if (!visited.has(val)) {
+          visited.add(val)
+          queue.push(val)
+        }
+      }
+    }
+  }
+
+  dfs(start){
+    let visited = new Set()
+    this.dfsHelper(start,visited)
+  }
+  dfsHelper(vertex, visited){
+    visited.add(vertex)
+    console.log(vertex);
+    for (const val of this.map.get(vertex)) {
+      if (!visited.has(val)) {
+        this.dfsHelper(val,visited)
+      }
+    }
+    this.map.forEach((val,key) => {
+      if(!visited.has(key)){
+        this.dfsHelper(key,visited)
+      }
+    });
+  }
 }
 
 

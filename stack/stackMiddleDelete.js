@@ -91,9 +91,11 @@ stack1.push(40)
 stack1.push(30)
 stack1.push(50)
 
+
 const stack2 = new Stack2()
 
 let middle = Math.floor(stack1.count/2)
+
 function change(){
   let i = 1
   while (i <= middle) {
@@ -102,6 +104,7 @@ function change(){
     i++
   }
 }
+
 function change2(){
   let i = 1
   while (i <= middle) {

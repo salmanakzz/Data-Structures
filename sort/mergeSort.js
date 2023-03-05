@@ -9,7 +9,7 @@ const merge=(leftarr,rightarr)=>{
       const leftEl=leftarr[leftindex]
       const rightEl=rightarr[rightindex]
 
-      if(leftEl>rightEl){
+      if(leftEl<rightEl){
           output.push(leftEl)
           leftindex++
       }else{
